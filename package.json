@@ -1,0 +1,28 @@
+{
+  "name": "newton-interp-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "精确有理数 Newton 插值多项式与增量差商解释后端（API + CLI）",
+  "bin": {
+    "newton": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/server.js",
+    "serve": "node dist/src/server.js",
+    "cli": "node dist/src/cli.js",
+    "demo": "node dist/scripts/demo.js",
+    "dev:server": "node --experimental-strip-types src/server.ts",
+    "dev:cli": "node --experimental-strip-types src/cli.ts",
+    "pretest": "tsc -p tsconfig.json",
+    "test": "node --test dist/test/newton.test.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
